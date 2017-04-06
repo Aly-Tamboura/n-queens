@@ -1,7 +1,6 @@
 // This file is a Backbone Model (don't worry about what that means)
 // It's part of the Board Visualizer
 // The only portions you need to work on are the helper functions (below)
-
 (function() {
 
   window.Board = Backbone.Model.extend({
@@ -79,7 +78,14 @@
     //
     // test if a specific row on this board contains a conflict
     hasRowConflictAt: function(rowIndex) {
-      return false; // fixme
+      var a = this.rows();
+      var b = this.get('n')
+      var c = this.attributes
+      console.log('this is the rowIndex', rowIndex);
+      console.log('this is the rows ', a);
+      console.log('this is the board ', b);
+      console.log('this is the attributes ', c);
+      // return false; // fixme
     },
 
     // test if any rows on this board contain conflicts
